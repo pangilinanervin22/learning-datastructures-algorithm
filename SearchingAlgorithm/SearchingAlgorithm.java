@@ -1,6 +1,9 @@
 package SearchingAlgorithm;
 
 public class SearchingAlgorithm {
+
+    // for me the best available way to search in unsorted array
+    // Time o(log n)
     public static boolean linerSearch(int[] array, int search) {
         for (int num : array)
             if (search == num)
@@ -8,6 +11,9 @@ public class SearchingAlgorithm {
         return false;
     }
 
+    // main prefer version of binary search more cleaner and much faster
+    // fastest that I know but array must be sorted
+    // Time - o(log n)
     public static boolean binarySearchIterative(int[] array, int target) {
         int left = 0;
         int right = array.length - 1;

@@ -3,7 +3,7 @@ package SortingAlgorithm;
 // ! all for int array only
 public class SortingAlgorithm {
 
-    // sample unsort array
+    // sample unsorted array
     public static int[] unSortArray = { 4, 1, 3, 5, 2, 7, 9, 6, 10, 8 };
 
     // for swapping array value
@@ -13,6 +13,8 @@ public class SortingAlgorithm {
         array[second] = temp;
     }
 
+    // Time - best o(n) / worst o(n²)
+    // pass and compare principle
     public static void bubbleSort(int[] array) {
         for (int i = 0; i < array.length; i++) {
             for (int j = 1; j < array.length; j++) {
@@ -23,6 +25,8 @@ public class SortingAlgorithm {
         }
     }
 
+    // Time - best o(n²) / worst o(n²)
+    // select smallest then swap (slowest that I remember)
     public static void selectionSort(int[] array) {
         for (int i = 0; i < array.length; i++) {
             int lowestIndex = i;
@@ -33,6 +37,8 @@ public class SortingAlgorithm {
         }
     }
 
+    // Time- best o(n) | worst o(n²)
+    // iteration and shifting
     public static void insertionSort(int[] array) {
         for (int i = 1; i < array.length; i++) {
             int current = array[i];
@@ -45,6 +51,8 @@ public class SortingAlgorithm {
         }
     }
 
+    // Time - best o(n log n) / worst o(n log n)
+    // space 0(n) divide and merge principle
     public static void mergeSort(int[] array) {
         if (array.length < 2)
             return;
@@ -81,6 +89,10 @@ public class SortingAlgorithm {
             sortArray[k++] = right[j++];
     }
 
+    // Time - best o(n log n) / worst o(n)
+    // partitioning
+    // Space - best o(log n) / worst o(n)
+    // best sorting algorithm
     public static void QuickSort(int[] array) {
         QuickSort.quickSort(array);
     }
@@ -113,6 +125,9 @@ public class SortingAlgorithm {
         }
     }
 
+    // Time- best o(n) / worst o(n)
+    // Space - o(k)
+    // fastest if sorting talking about number but worst space complexity
     public static void CountingSort(int[] array, int biggestValue) {
         int[] numCount = new int[biggestValue + 2];
         for (int num : array) {
