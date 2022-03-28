@@ -26,10 +26,12 @@ public class SearchingAlgorithm {
         return false;
     }
 
+    // main function
     public static boolean binarySearchRec(int[] array, int target) {
         return binarySearchRec(array, target, 0, array.length - 1);
     }
 
+    // for recursive function
     private static boolean binarySearchRec(int[] array, int target, int left, int right) {
         if (right <= left)
             return false;

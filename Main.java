@@ -1,7 +1,10 @@
 
+import java.lang.reflect.Array;
+import java.util.Arrays;
 import java.util.Scanner;
 
 import SearchingAlgorithm.SearchingAlgorithm;
+import SortingAlgorithm.SortingAlgorithm;
 
 public class Main {
 
@@ -23,6 +26,13 @@ public class Main {
         // * Time o(log n)
         findValue = SearchingAlgorithm.binarySearchIterative(sortArray, 5);
         System.out.println(findValue);
+
+        // QuickSort
+        // Time - best o(n log n) / worst o(n)
+        // Partitioning = Space - best o(log n) / worst o(n)
+        SortingAlgorithm.QuickSort(unSortArray);
+        System.out.println(Arrays.toString(unSortArray));
+
     }
 
 }
