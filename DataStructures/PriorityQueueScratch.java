@@ -35,8 +35,8 @@ public class PriorityQueueScratch {
     // }
 
     public void resize() {
-        var tempArray = new int[items.length * 2];
-        var current = 0;
+        int[] tempArray = new int[items.length * 2];
+        int current = 0;
         for (int num : items) {
             tempArray[current] = num;
             current++;
