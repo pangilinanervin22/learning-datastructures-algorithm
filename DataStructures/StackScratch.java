@@ -2,7 +2,7 @@ package DataStructures;
 
 import java.util.Arrays;
 
-public class StackScartch {
+public class StackScratch {
     private int[] items = new int[10];
     private int index;
 
